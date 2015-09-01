@@ -13,6 +13,8 @@ public class MainController {
     private String userName;
     private int listeningPort;
 
+    private Vector<Connection> connectionsList;
+
 
     MainController(){
         // Create GUI
@@ -34,13 +36,18 @@ public class MainController {
 
     }
 
-    public void startChat(Vector<Connection> connectionList){
+    public void startChat(Vector<Connection> chatConnections){
 
     }
 
     public void controllerGUIClosed() {
         // TODO send disconnect messages
         System.exit(0);
+    }
+
+    public void addNewConnection(Connection c){
+        connectionsList.add(c);
+        GUI.updateConnections(connectionsList);
     }
 }
 

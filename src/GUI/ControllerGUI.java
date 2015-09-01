@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Vector;
 
 /**
  * Created by elroi on 2015-09-01.
@@ -165,6 +166,10 @@ public class ControllerGUI extends JFrame {
 
     public String getUserName() {
         return userName;
+    }
+
+    public void updateConnections(Vector<Connection> connections){
+        listOfConnections.setListData(connections);
     }
 
 }
