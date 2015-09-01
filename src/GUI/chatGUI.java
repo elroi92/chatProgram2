@@ -20,14 +20,18 @@ public class chatGUI extends JFrame {
         super(windowName);
         chat = c;
 
-        buildChatWIndow();
+        buildChatWindow();
+    }
+
+    public void messageReceived(String s){
+        displayArea.setText(s);
     }
 
     /**
      * Builds the chat window by adding all fields and buttons as well as making the window visible. It also adds
      * listeners to all the buttons and a listener so that the default close operation becomes a method call.
      */
-    private void buildChatWIndow() {
+    private void buildChatWindow() {
         Dimension chatWindowDimension = new Dimension(500, 400);
         Dimension   writeAreDimensions  = new Dimension(0, 83);
         JPanel      mainPanel           = new JPanel(new GridBagLayout());
