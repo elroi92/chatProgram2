@@ -23,7 +23,7 @@ public class MainController {
         listeningPort = GUI.getListeningPort();
 
         // start listener/server
-        new Server(this, GUI.getListeningPort());
+        new ConnectionListener(this, GUI.getListeningPort());
     }
 
     public static void main(String[] args){
